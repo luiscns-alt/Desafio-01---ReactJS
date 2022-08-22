@@ -11,7 +11,7 @@
   --purple: #8284FA;
   --purpleDark: #5E60CE;
 
-  --blue: #4EA8;
+  --blue: #4EA8DE;
   --blueDark: #1E6F9F;
 
   --danger: #E25858;
@@ -26,6 +26,7 @@
 body {
   background: #454545;
   color: var(--gray-300);
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 

@@ -18,7 +18,7 @@ export function Input() {
     setNewTask(event.target.value);
   }
   return (
-    <div>
+    <div className={styles.contener}>
       <form onSubmit={handleCreateNewTask} className={styles.box}>
         <input
           name="task"
@@ -31,15 +31,6 @@ export function Input() {
           Criar <img src={Add} alt="Botão de Adicionar Nova Tarefa" />
         </button>
       </form>
-      <div className={styles.list}>
-        <h5>Tarefas criadas</h5>
-        <h5>Concluidas</h5>
-      </div>
-      <div>
-        {tasks.map((task, index) => {
-          return <h1 key={task}>{task}</h1>;
-        })}
-      </div>
     </div>
   );
 }
