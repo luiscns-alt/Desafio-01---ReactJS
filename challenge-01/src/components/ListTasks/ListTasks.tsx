@@ -1,3 +1,4 @@
+import { Task } from "../Task/Task";
 import styles from "./ListTasks.module.css";
 
 export function ListTasks() {
@@ -13,6 +14,10 @@ export function ListTasks() {
           <span>N</span>
         </div>
       </header>
+      <div className={styles.list}>
+        <Task />
+        <Task />
+      </div>
     </section>
   );
 }
