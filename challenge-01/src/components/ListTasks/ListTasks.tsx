@@ -1,5 +1,6 @@
 import { TaskInterface } from "../../App";
 import { Task } from "../Task/Task";
+import Clipboard from "../../assets/Clipboard.svg";
 import styles from "./ListTasks.module.css";
 
 interface TasksProps {
@@ -35,6 +36,16 @@ export function ListTasks({ tasks, onComplete, onDelete }: TasksProps) {
             onDelete={onDelete}
           />
         ))}
+
+        {tasks.length <= 0 && (
+          <section className={styles.empty}>
+            <img src={Clipboard} alt="Sem Tarefas" />
+            <div>
+              <p>Você ainda não tem tarefas cadastradas</p>
+              <span>Crie tarefas e organize seus itens a fazer</span>
+            </div>
+          </section>
+        )}
       </div>
     </section>
   );
