@@ -24,7 +24,7 @@
   font-weight: 700;
 }
 
-.header p.textPurple {
+.header p.text__purple {
   color: var(--purple);
 }
 

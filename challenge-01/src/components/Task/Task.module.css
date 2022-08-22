@@ -27,19 +27,13 @@ p.text__completed {
   height: 1.125rem;
   background: none;
   border: none;
+  color: var(--gray-300);
 }
 
-.check__container div {
-  width: 100%;
-  height: 100%;
-  border-radius: 999px;
-  border: 2px solid var(--blue);
-}
-
-.check__container svg {
-  width: 100%;
-  height: 100%;
-  color: var(--purple);
+.check__button {
+  background: none;
+  border: none;
+  color: var(--gray-300);
 }
 
 .delete__button {

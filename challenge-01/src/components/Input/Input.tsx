@@ -1,15 +1,18 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
-import styles from "../Input/Input.module.css";
+import { ChangeEvent, FormEvent, useState } from "react";
 import Add from "../../assets/plus.svg";
+import styles from "../Input/Input.module.css";
 
-export function Input() {
-  const [tasks, setTasks] = useState(["Tarefa"]);
+interface InputProps {
+  onAddTask: (title: string) => void;
+}
+
+export function Input({ onAddTask }: InputProps) {
   const [newTask, setNewTask] = useState("");
 
   function handleCreateNewTask(event: FormEvent) {
     event.preventDefault();
 
-    setTasks([...tasks, newTask]);
+    onAddTask(newTask);
     setNewTask("");
   }
 
@@ -17,6 +20,7 @@ export function Input() {
     event.target.setCustomValidity("");
     setNewTask(event.target.value);
   }
+
   return (
     <div className={styles.contener}>
       <form onSubmit={handleCreateNewTask} className={styles.box}>
